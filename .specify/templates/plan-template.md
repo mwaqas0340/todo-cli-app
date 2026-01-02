@@ -31,7 +31,13 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+1. **Clean and Readable Python Code**: Implementation must follow PEP 8 guidelines with consistent formatting and clear documentation
+2. **Beginner-Friendly Structure**: Code organization must be intuitive and include comprehensive comments for complex logic
+3. **Separation of Concerns**: CLI interface must be strictly separated from business logic with independent testability
+4. **Defensive Programming**: All user inputs must be validated with appropriate error handling
+5. **In-Memory Storage Only**: No files or databases allowed - all data storage must be in-memory
+6. **No External Libraries**: Only standard Python library functions permitted
+7. **Explicit Feature Scope**: Only features explicitly defined in requirements may be implemented
 
 ## Project Structure
 

@@ -62,12 +62,12 @@ description: "Task list template for feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
+- [ ] T004 Create in-memory data storage structure (no files/databases)
+- [ ] T005 [P] Implement input validation framework for CLI arguments
+- [ ] T006 [P] Setup separation between CLI interface and business logic
 - [ ] T007 Create base models/entities that all stories depend on
 - [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T009 Setup environment configuration management (using only standard library)
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -88,12 +88,12 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
-- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
+- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py (following PEP 8 standards)
+- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py (with clear documentation)
 - [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
-- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T016 [US1] Add validation and error handling
-- [ ] T017 [US1] Add logging for user story 1 operations
+- [ ] T015 [US1] Implement [CLI command] in src/cli/[command].py (separate from business logic)
+- [ ] T016 [US1] Add input validation and error handling (defensive programming)
+- [ ] T017 [US1] Add logging for user story 1 operations (in-memory only)
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -150,12 +150,12 @@ Examples of foundational tasks (adjust based on your project):
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] TXXX [P] Documentation updates in docs/
-- [ ] TXXX Code cleanup and refactoring
-- [ ] TXXX Performance optimization across all stories
+- [ ] TXXX [P] Documentation updates in docs/ (beginner-friendly explanations)
+- [ ] TXXX Code cleanup and refactoring (maintain PEP 8 compliance)
+- [ ] TXXX Performance optimization across all stories (in-memory operations)
 - [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
-- [ ] TXXX Security hardening
-- [ ] TXXX Run quickstart.md validation
+- [ ] TXXX Security hardening (input validation checks)
+- [ ] TXXX Run quickstart.md validation (ensure no external dependencies)
 
 ---
 

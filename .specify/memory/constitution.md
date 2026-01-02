@@ -1,55 +1,59 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT
+Version change: N/A (initial creation) → 1.0.0
+Modified principles: N/A
+Added sections: Core principles for Python CLI application
+Removed sections: N/A
+Templates requiring updates:
+- .specify/templates/plan-template.md ✅ updated
+- .specify/templates/spec-template.md ✅ updated
+- .specify/templates/tasks-template.md ✅ updated
+- .specify/templates/commands/*.md ⚠ pending
+Follow-up TODOs: None
+-->
+# Todo App Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Clean and Readable Python Code
+All code must be clean, readable, and maintainable. Python code should follow PEP 8 style guidelines with consistent formatting, meaningful variable names, and clear documentation where necessary.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Beginner-Friendly but Professional Structure
+Code structure should be approachable for beginners while maintaining professional standards. Clear separation of concerns, intuitive file organization, and comprehensive comments for complex logic are required.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Separation of Concerns (CLI vs Logic)
+Strict separation between CLI interface and business logic is mandatory. All core functionality must be implemented in separate modules that can be tested independently of CLI components.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Defensive Programming (Input Validation)
+All user inputs must be validated with appropriate error handling. Functions should handle edge cases gracefully, validate parameters, and provide clear error messages to users.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### In-Memory Storage Only
+All data storage must be in-memory only. No files or databases are allowed. This constraint ensures simplicity and portability of the application.
 
-### [PRINCIPLE_6_NAME]
+### No External Libraries
+No external dependencies are permitted. Only standard Python library functions may be used to ensure maximum compatibility and reduce complexity.
 
+### Explicit Feature Scope
+Only explicitly defined features may be implemented. No feature creep is allowed - all functionality must be clearly specified in the requirements before implementation.
 
-[PRINCIPLE__DESCRIPTION]
+## Additional Constraints
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Technology stack: Python 3.x standard library only
+Data persistence: In-memory storage only (no files, no databases)
+Dependencies: No external packages or libraries
+Testing: All functions must have corresponding unit tests
+Error handling: All user inputs must be validated with appropriate error messages
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Development Workflow
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Code review: All changes must be reviewed for compliance with constitution principles
+Testing: All new features must include unit tests
+Validation: Code must pass all existing tests before merging
+Documentation: Complex functions must include clear docstrings
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other development practices. Any deviation from these principles requires explicit amendment to the constitution. All pull requests must verify compliance with these principles before approval. Code reviews must check for adherence to the hard constraints and core principles.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+All implementations must follow spec-driven development and not implement anything outside the provided specification. The goal is correctness, simplicity, and reliability.
+
+**Version**: 1.0.0 | **Ratified**: 2026-01-02 | **Last Amended**: 2026-01-02

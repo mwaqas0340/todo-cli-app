@@ -84,16 +84,17 @@
 
 ### Functional Requirements
 
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-001**: System MUST follow clean and readable Python code standards with PEP 8 compliance
+- **FR-002**: System MUST maintain beginner-friendly but professional code structure with clear documentation
+- **FR-003**: System MUST strictly separate CLI interface from business logic modules
+- **FR-004**: System MUST implement defensive programming with input validation and error handling
+- **FR-005**: System MUST store all data in-memory with no external file or database dependencies
+- **FR-006**: System MUST use only standard Python library functions with no external dependencies
+- **FR-007**: System MUST implement only explicitly defined features without feature creep
 
 *Example of marking unclear requirements:*
 
-- **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
-- **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
+- **FR-008**: System MUST implement [specific capability] - [NEEDS CLARIFICATION: requirement not specified in feature description]
 
 ### Key Entities *(include if feature involves data)*
 
